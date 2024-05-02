@@ -105,4 +105,36 @@ class Solutions:
                 if chain not in seen:
                     heapq.heappush(priority_queue, (child.cost, id(child), child))  # Push child to priority queue
                     seen.add(chain)
-        print("There is no solution !!!!")  # This should be outside the loop   
+        print("There is no solution !!!!")  # This should be outside the loop
+
+    @staticmethod
+    def DepthSolutionL(frame, cus):
+        print("Depth First Search : ")
+        print(" The Starting Point : ")
+        Operations.printConsole(frame)
+        stack = [Node(frame)]
+        seen = set()
+        L = Operations.Linear(stack[0].frame)
+        seen.add(''.join(map(str, L)))
+        start_time = time.time()
+        while stack:
+            node = stack.pop()
+            if node.frame.solved:
+                end_time = time.time()
+                passed_time = end_time - start_time
+                solution_path = list(node.path)
+                # Affichage.motion(solution_path)
+                aff = Affichage(cus.canva, cus.Lpic, cus.window)
+                # aff.motion(solution_path)
+                print("Solution is found after", len(solution_path), " steps")
+                print(f"The operation took {passed_time:.6f} seconds.")
+                aff.motion(solution_path)
+                return
+            for move, action in node.frame.actions:
+                child = Node(move(), node, action)
+                L = Operations.Linear(child.frame)
+                chain = ''.join(map(str, L))
+                if chain not in seen:
+                    stack.append(child)
+                    seen.add(chain)
+        print("There is no solution !!!!")

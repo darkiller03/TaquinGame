@@ -40,11 +40,15 @@ def func3():
 def func4():
 	resolver.ASearch()
 
+def func5():
+	resolver.DFSearchL()
+
 func_dict = {
 	'func1': func1,
 	'func2': func2,
 	'func3' : func3,
-	'func4' : func4
+	'func4' : func4,
+	'func5' : func5
 }
 
 

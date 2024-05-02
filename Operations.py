@@ -13,7 +13,7 @@ class Operations:
     def Linear(frame):
     	L=[]
     	for row in frame.state:
-    		L.extend(row)
+    	    L.extend(row)
     	return L
 
     @staticmethod

@@ -16,7 +16,7 @@ class Frame:
         L = Operations.Linear(self)
         for i in range (len(L)):
             if (L[i]!=comp[i]):
-                return False;
+                return False
         return sol
 
     @property 

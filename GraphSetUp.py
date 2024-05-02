@@ -11,6 +11,7 @@ class GraphSetUp:
         self.func2 = func_dict['func2']
         self.func3 = func_dict['func3']
         self.func4 = func_dict['func4']
+        self.func5 = func_dict['func5']
         self.start = Operations.Linear2(cus.first_state)
         self.can = cus.canva
 
@@ -41,6 +42,7 @@ class GraphSetUp:
         Button(self.window , text='Breadth',command=self.func2).pack(side=LEFT )
         Button(self.window , text='Depth',command=self.func3).pack(side=LEFT)
         Button(self.window,text='ASearch',command=self.func4).pack(side=LEFT)
+        Button(self.window,text='lDepth',command=self.func5).pack(side=LEFT)
 
         
         for k in range(len(self.Lpic)) :
