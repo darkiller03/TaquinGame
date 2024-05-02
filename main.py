@@ -26,6 +26,7 @@ Operations.printConsole2(cus.final_state)
 frame = Frame(cus.first_state , cus)
 resolver = Resolver(frame,cus)
 
+
 def func1():
 	cus.shuffle()
 	frame.firstFrameupdate()
@@ -36,10 +37,14 @@ def func2():
 def func3():
 	resolver.DFSearch()
 
+def func4():
+	resolver.ASearch()
+
 func_dict = {
 	'func1': func1,
 	'func2': func2,
-	'func3' : func3
+	'func3' : func3,
+	'func4' : func4
 }
 
 

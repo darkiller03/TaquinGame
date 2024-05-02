@@ -15,3 +15,6 @@ class Resolver:
     def DFSearch(self):
         Solutions.DepthSolution(self.first_frame,self.cus)
 
+    def ASearch(self):
+        Solutions.AStarSolution(self.first_frame,self.cus)
+

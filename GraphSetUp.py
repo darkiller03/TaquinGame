@@ -10,6 +10,7 @@ class GraphSetUp:
         self.func1 = func_dict['func1']
         self.func2 = func_dict['func2']
         self.func3 = func_dict['func3']
+        self.func4 = func_dict['func4']
         self.start = Operations.Linear2(cus.first_state)
         self.can = cus.canva
 
@@ -36,9 +37,10 @@ class GraphSetUp:
         start_y = (canvas_height - total_height) //2
         x = start_x 
         y = start_y
-        Button(self.window,text='Shuffle',command=self.func1).pack(side=LEFT,padx= (90,0))
+        Button(self.window,text='Shuffle',command=self.func1).pack(side=LEFT,padx= (60,0))
         Button(self.window , text='Breadth',command=self.func2).pack(side=LEFT )
         Button(self.window , text='Depth',command=self.func3).pack(side=LEFT)
+        Button(self.window,text='ASearch',command=self.func4).pack(side=LEFT)
 
         
         for k in range(len(self.Lpic)) :
